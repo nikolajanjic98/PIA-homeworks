@@ -1,0 +1,87 @@
+h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 24pt;
+    font-weight: bold;
+    text-shadow: 3px 3px #999999;
+    text-align: center;
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("images/background.png");
+}
+
+dt {
+    padding-top: 15px;
+}
+
+.Wrapper_Top
+{
+    width: 75%;
+    height: 83px;
+}
+
+.Wrapper_Right
+{
+    background-color: #A2B964;
+    position:relative;
+    float: right;
+    top: -83px;
+    width: 25%;
+    height: 100%;
+}
+
+.Chunk_Top_Left {
+    background-image: url("images/freshbig.png");
+    position:relative;
+    top: -83px;
+    width:98px;
+    height:83px;
+    margin-bottom: 0px;
+}
+
+.Chunk_Top_Banner {
+    background-image: url("images/rbg.png");
+    position:relative;
+    top:0px;
+    right: 0;
+    left:0;
+    height:83px;
+    margin-bottom: 0px;
+}
+
+.Chunk_DisechantmentPicture
+{
+    content: url("images/disenchantment.jpg");
+    top: 0px;
+    width:100%;
+}
+
+.Chunk_DisenchantmentInfo
+{
+    overflow-wrap: break-word;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+
+
+
+.Chunk_Main {
+    width: 50%;
+    height: 1000px;
+    background: #EEEEEE;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    
+    margin: auto;
+    border-style: solid;
+    border-width: 0px 5px 5px 0px;
+    border-color: #999999;
+}
