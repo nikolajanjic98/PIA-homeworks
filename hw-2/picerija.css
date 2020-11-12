@@ -1,0 +1,29 @@
+body {
+    position: relative; 
+}
+
+#Wrapper
+{
+    padding-top:50px;
+}
+
+#ONama {
+    padding-top:75px;
+    height:400px;
+    color: #fff; 
+    background-color: #d9a96a;
+}
+
+#Meni {
+    padding-top:75px;
+    height:1200px;
+    color: #fff; 
+    background-color: #d9866a;
+}
+
+#Kontakt {
+    padding-top:75px;
+    height:300px;
+    color: #fff; 
+    background-color: #b35454;
+}
