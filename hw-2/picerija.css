@@ -4,21 +4,47 @@ body {
 
 #Wrapper
 {
+    position:relative;
     padding-top:50px;
 }
 
 #ONama {
     padding-top:75px;
-    height:400px;
+    height:700px;
     color: #fff; 
     background-color: #d9a96a;
 }
 
 #Meni {
     padding-top:75px;
-    height:1200px;
+    height:1600px;
     color: #fff; 
     background-color: #d9866a;
+}
+
+#ElementContainer
+{
+    padding-top: 25px;
+    height:400px;
+    
+    background-color: #d9a96a;
+    
+}
+
+.LogoContainer
+{
+    height:400px;
+    width:400px;
+}
+
+.row_span_short
+{
+    height: 25px;
+}
+
+.row_span_medium
+{
+    height: 50px;
 }
 
 #Kontakt {
