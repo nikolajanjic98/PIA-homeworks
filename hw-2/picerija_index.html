@@ -32,61 +32,263 @@
 
 <div id="Wrapper">
     <div id="ONama" class="container-fluid"> 
-        <div class = "row_span_medium"></div>
+        <div id="row_span_medium"></div>
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-3">
-                <div class="LogoContainer">
+                <div id="LogoContainer">
                     <img src="images/logo.png" class="img-fluid" alt="Responsive image">
                 </div>
             </div>
-            <div class="col-md-8">
-                <h2>O Nama</h2>
-                <p>Kratak opis o nama.</p>
-            </div>
             <div class="col-md-1"></div>
+            <div class="col-md-6">
+                <p id="h2_ONama" class="text-center font-weight-bold">O Nama</p>
+                <p id="p_ONama" class="text-center">Osnovani 2000. godine, ugodno ušuškani u srcu Retenzije. Maksimalno pripremljeni i motivisani da svakom našem gostu pripremimo savršen obrok. Bavimo se pripremanjem italijanskih i ostalih kulinarskih specijaliteta. Specijalnost su nam pice, ali i salate, sendviči, palačinke slatke i slane, špageti i jela sa roštilja. Za svakoga naš šef kuhinje ima po nešto... </p>
+            </div>
+            <div class="col-md-2"></div>
         </div>
     </div>
     <div id="Meni" class="container-fluid">
         <div class="col-md-12">
-            <h1>Meni</h1>
+            <p id="h2_Meni" class="text-center font-weight-bold">Meni</p>
         </div>
         <div class="row">
                 <div class="col-md-1"></div>
-                <div class="col-md-5">
-                    <div id="ElementContainer"></div>    
+                <div class="col-md-4">
+                    <div id="ElementContainer" class="thumbnail">
+                        <img src="images/Pica_1.jpg" class="img-fluid" alt="Responsive image" style="width:auto";>
+                    </div>    
                 </div>
-                <div class="col-md-5">
-                    <div id="ElementContainer"></div>    
+                <div class="col-md-6">
+                    <div id="ElementContainer">
+                        <p id="p_NazivPice" class="text-center font-weight-bold">PICA AL SERBO</p>
+                        <p id="p_SastojciPice" class="text-center font-weight-bold">Sastojci: Pelat, Sir, Kulen, Slanina, Kajmak, Jaje, Feferone, Masline, Origano.</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="form-group form-inline">
+                                <label id="label_velicina" class="text-center font-weight-bold" for="Velicina">Veličina</label>
+                                <select class="form-control text-center font-weight-bold" style="width:100%"; id="Velicina">
+                                    <option>Mala</option>
+                                    <option>Srednja</option>
+                                    <option>Velika</option>
+                                </select>
+                                <label id="label_velicina" class="text-center font-weight-bold" for="Kolicina">Količina</label>
+                                <select class="form-control text-center font-weight-bold" style="width:100%"; id="Kolicina">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-dark btn-lg btn-block">Naruči Picu</button>
+                    </div>    
                 </div>
                 <div class="col-md-1"></div>
         </div>
-        <div class="row_span_short"></div>
+        <div id="row_span_short"></div>
         <div class="row">
                 <div class="col-md-1"></div>
-                <div class="col-md-5">
-                    <div id="ElementContainer"></div>    
+                <div class="col-md-4">
+                    <div id="ElementContainer" class="thumbnail">
+                        <img src="images/Pica_2.jpg" class="img-fluid" alt="Responsive image" style="width:auto";>
+                    </div>    
                 </div>
-                <div class="col-md-5">
-                    <div id="ElementContainer"></div>    
+                <div class="col-md-6">
+                    <div id="ElementContainer">
+                        <p id="p_NazivPice" class="text-center font-weight-bold">PICA PICCANTE</p>
+                        <p id="p_SastojciPice" class="text-center font-weight-bold">Sastojci: Pelat, Sir, Dimljeni vrat, Slanina, Feferone, Crni luk, Masline, Origano.</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="form-group form-inline">
+                                <label id="label_velicina" class="text-center font-weight-bold" for="Velicina">Veličina</label>
+                                <select class="form-control text-center font-weight-bold" style="width:100%"; id="Velicina">
+                                    <option>Mala</option>
+                                    <option>Srednja</option>
+                                    <option>Velika</option>
+                                </select>
+                                <label id="label_velicina" class="text-center font-weight-bold" for="Kolicina">Količina</label>
+                                <select class="form-control text-center font-weight-bold" style="width:100%"; id="Kolicina">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-dark btn-lg btn-block">Naruči Picu</button>
+                    </div>    
                 </div>
                 <div class="col-md-1"></div>
         </div>
-        <div class="row_span_short"></div>
+        <div id="row_span_short"></div>
         <div class="row">
                 <div class="col-md-1"></div>
-                <div class="col-md-5">
-                    <div id="ElementContainer"></div>    
+                <div class="col-md-4">
+                    <div id="ElementContainer" class="thumbnail">
+                        <img src="images/Pica_3.jpg" class="img-fluid" alt="Responsive image" style="width:auto";>
+                    </div>    
                 </div>
-                <div class="col-md-5">
-                    <div id="ElementContainer"></div>    
+                <div class="col-md-6">
+                    <div id="ElementContainer">
+                        <p id="p_NazivPice" class="text-center font-weight-bold">PICA MIDEX LUX</p>
+                        <p id="p_SastojciPice" class="text-center font-weight-bold">Sastojci: Pelat, Sir, Šunka, Kulen, Pečurke, Jaje, Dimljeni vrat, Pršuta, Masline, Origano.</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="form-group form-inline">
+                                <label id="label_velicina" class="text-center font-weight-bold" for="Velicina">Veličina</label>
+                                <select class="form-control text-center font-weight-bold" style="width:100%"; id="Velicina">
+                                    <option>Mala</option>
+                                    <option>Srednja</option>
+                                    <option>Velika</option>
+                                </select>
+                                <label id="label_velicina" class="text-center font-weight-bold" for="Kolicina">Količina</label>
+                                <select class="form-control text-center font-weight-bold" style="width:100%"; id="Kolicina">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-dark btn-lg btn-block">Naruči Picu</button>
+                    </div>    
+                </div>
+                <div class="col-md-1"></div>
+        </div>
+        <div id="row_span_short"></div>
+        <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <div id="ElementContainer" class="thumbnail">
+                        <img src="images/Pica_4.jpg" class="img-fluid" alt="Responsive image" style="width:auto";>
+                    </div>    
+                </div>
+                <div class="col-md-6">
+                    <div id="ElementContainer">
+                        <p id="p_NazivPice" class="text-center font-weight-bold">PICA VEGETERIANA</p>
+                        <p id="p_SastojciPice" class="text-center font-weight-bold">Sastojci: Pelat, Sir, Pečurke, Paradajz, Paprika, Rukola, Crne masline.</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="form-group form-inline">
+                                <label id="label_velicina" class="text-center font-weight-bold" for="Velicina">Veličina</label>
+                                <select class="form-control text-center font-weight-bold" style="width:100%"; id="Velicina">
+                                    <option>Mala</option>
+                                    <option>Srednja</option>
+                                    <option>Velika</option>
+                                </select>
+                                <label id="label_velicina" class="text-center font-weight-bold" for="Kolicina">Količina</label>
+                                <select class="form-control text-center font-weight-bold" style="width:100%"; id="Kolicina">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-dark btn-lg btn-block">Naruči Picu</button>
+                    </div>    
+                </div>
+                <div class="col-md-1"></div>
+        </div>
+        <div id="row_span_short"></div>
+        <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <div id="ElementContainer" class="thumbnail">
+                        <img src="images/Pica_5.jpg" class="img-fluid" alt="Responsive image" style="width:auto";>
+                    </div>    
+                </div>
+                <div class="col-md-6">
+                    <div id="ElementContainer">
+                        <p id="p_NazivPice" class="text-center font-weight-bold">PICA QUATTRO STAGIONI</p>
+                        <p id="p_SastojciPice" class="text-center font-weight-bold">Sastojci: Pelat, Sir, Šunka, Pečurke, Jaje, Kulen, Masline, Origano.</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="form-group form-inline">
+                                <label id="label_velicina" class="text-center font-weight-bold" for="Velicina">Veličina</label>
+                                <select class="form-control text-center font-weight-bold" style="width:100%"; id="Velicina">
+                                    <option>Mala</option>
+                                    <option>Srednja</option>
+                                    <option>Velika</option>
+                                </select>
+                                <label id="label_velicina" class="text-center font-weight-bold" for="Kolicina">Količina</label>
+                                <select class="form-control text-center font-weight-bold" style="width:100%"; id="Kolicina">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-dark btn-lg btn-block">Naruči Picu</button>
+                    </div>    
+                </div>
+                <div class="col-md-1"></div>
+        </div>
+        <div id="row_span_short"></div>
+        <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <div id="ElementContainer" class="thumbnail">
+                        <img src="images/Pica_6.jpg" class="img-fluid" alt="Responsive image" style="width:auto";>
+                    </div>    
+                </div>
+                <div class="col-md-6">
+                    <div id="ElementContainer">
+                        <p id="p_NazivPice" class="text-center font-weight-bold">PICA FRUTTI DI MARE</p>
+                        <p id="p_SastojciPice" class="text-center font-weight-bold">Sastojci:Pelat, Sir, Mix plodova mora, Crne masline, Origano.</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="form-group form-inline">
+                                <label id="label_velicina" class="text-center font-weight-bold" for="Velicina">Veličina</label>
+                                <select class="form-control text-center font-weight-bold" style="width:100%"; id="Velicina">
+                                    <option>Mala</option>
+                                    <option>Srednja</option>
+                                    <option>Velika</option>
+                                </select>
+                                <label id="label_velicina" class="text-center font-weight-bold" for="Kolicina">Količina</label>
+                                <select class="form-control text-center font-weight-bold" style="width:100%"; id="Kolicina">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-dark btn-lg btn-block">Naruči Picu</button>
+                    </div>    
                 </div>
                 <div class="col-md-1"></div>
         </div>
         
     </div>
     <div id="Kontakt" class="container-fluid">
-        <h1>Kontakt</h1>
+        <h2>Kontakt</h2>
         <p>Ime, broj telefona, drustvene mreze</p>
     </div>
 </div>

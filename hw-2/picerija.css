@@ -8,41 +8,88 @@ body {
     padding-top:50px;
 }
 
+#h2_ONama
+{
+    color:#2e2e2e;
+    font-size: 64px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#p_ONama {
+    color:#2e2e2e;
+    font-size: 32px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#h2_Meni
+{
+    padding-bottom: 25px;
+    color:#2e2e2e;
+    font-size: 64px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#p_NazivPice
+{
+    padding-top: 25px;
+    color:#2e2e2e;
+    font-size: 40px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#p_SastojciPice
+{
+    padding-top: 5px;
+    color:#2e2e2e;
+    font-size: 24px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#label_velicina
+{
+    padding-top: 5px;
+    color:#2e2e2e;
+    font-size: 24px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+
 #ONama {
-    padding-top:75px;
-    height:700px;
+    padding-top:50px;
+    padding-bottom: 50px;
+    height:auto;
     color: #fff; 
     background-color: #d9a96a;
 }
 
 #Meni {
     padding-top:75px;
-    height:1600px;
+    padding-bottom:75px;
+    height:auto;
     color: #fff; 
     background-color: #d9866a;
 }
 
 #ElementContainer
 {
-    padding-top: 25px;
-    height:400px;
+    height:auto;
     
     background-color: #d9a96a;
     
 }
 
-.LogoContainer
+#LogoContainer
 {
-    height:400px;
-    width:400px;
+    height:500px;
+    width:500px;
 }
 
-.row_span_short
+#row_span_short
 {
     height: 25px;
 }
 
-.row_span_medium
+#row_span_medium
 {
     height: 50px;
 }
