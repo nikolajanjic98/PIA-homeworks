@@ -29,6 +29,14 @@ body {
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
+#h2_Kontakt
+{
+    padding-bottom: 25px;
+    color:#2e2e2e;
+    font-size: 64px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
 #p_NazivPice
 {
     padding-top: 25px;
@@ -53,6 +61,13 @@ body {
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
+#label_form
+{
+    padding-top: 5px;
+    color:#2e2e2e;
+    font-size: 24px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
 
 #ONama {
     padding-top:50px;
@@ -68,6 +83,14 @@ body {
     height:auto;
     color: #fff; 
     background-color: #d9866a;
+}
+
+#Kontakt {
+    padding-top:75px;
+    padding-bottom: 75px;
+    height:auto;
+    color: #fff; 
+    background-color: #b35454;
 }
 
 #ElementContainer
@@ -86,7 +109,7 @@ body {
 
 #row_span_short
 {
-    height: 25px;
+    height: 40px;
 }
 
 #row_span_medium
@@ -94,9 +117,3 @@ body {
     height: 50px;
 }
 
-#Kontakt {
-    padding-top:75px;
-    height:300px;
-    color: #fff; 
-    background-color: #b35454;
-}
