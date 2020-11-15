@@ -35,6 +35,7 @@ dt {
 .Chunk_Top_Left {
     background-image: url("images/freshbig.png");
     position:relative;
+    float:none;
     top: -83px;
     width:98px;
     height:83px;
@@ -49,6 +50,17 @@ dt {
     left:0;
     height:83px;
     margin-bottom: 0px;
+}
+
+.div_92 {
+    padding-top: 5px;
+    padding-left: 98px;
+    position:relative;
+    text-align: center;
+    font-size:  48pt;
+    color: red;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
 }
 
 .Chunk_DisechantmentPicture
