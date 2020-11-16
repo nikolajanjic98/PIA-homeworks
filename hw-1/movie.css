@@ -20,6 +20,7 @@ dt {
 {
     width: 75%;
     height: 83px;
+    margin-bottom: 1rem;
 }
 
 .Wrapper_Right
@@ -27,7 +28,7 @@ dt {
     background-color: #A2B964;
     position:relative;
     float: right;
-    top: -83px;
+    top: -99px;
     width: 25%;
     height: 100%;
 }
@@ -80,14 +81,54 @@ dt {
     padding-right: 15px;
 }
 
+.Wrapper_Critics
+{
+    position:relative;
+    width: 75%;
+    float: left;
+}
 
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
 
+.flex-element {
+    border-radius: 12px;
+    border: 2px solid #CCCCCC;
+    
+    
+    background-color: #FFFFFF;
+    
+}
+.flex-element-content {
+    padding: 1em;
+    font-size: 13pt;
+    font-family: cursive;
+}
 
+.flex-element-author {
+    padding-top: 5px;
+    padding-bottom: 30px;
+    font-size: 13pt;
+}
+
+.img-tomato{
+    padding-right: 5px;
+}
+
+.img-author {
+    padding-right: 5px;
+}
 
 
 .Chunk_Main {
     width: 50%;
-    height: 1000px;
+    height: 2000px;
     background: #EEEEEE;
     padding-top: 0px;
     margin-bottom: 0px;
