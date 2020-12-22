@@ -74,6 +74,15 @@ body {
     padding-top: 80px;
 }
 
+#AnswersType2
+{
+    font-size: 24px;
+    color:#fff;
+    background-color: #494949;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    padding-top: 80px;
+}
+
 #Controls
 {
     background-color: #494949;

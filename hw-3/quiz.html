@@ -57,8 +57,8 @@
                     <div class="form-row">
                         <div class="col">
                             <label id="label_form" class="font-weight-bold" for="EnterName">Your name</label>
-                            <input type="text" class="form-control" id="Ime" placeholder="Enter name">
-                            <p style="color: red; font-size: 16px;">*Required field.</p>
+                            <input id="NameField" type="text" class="form-control" id="Name" placeholder="Enter name">
+                            <p id="Warning-namemissing" class="hide" style="color: red; font-size: 16px;">*Required field.</p>
                         </div>
                     </div>
                     <p id = "Padding_Short"></p>
@@ -107,6 +107,23 @@
                     <button id="answer3-btn" type="button" class="btn btn-lg btn-outline-info">Answer3</button>
                     <button id="answer4-btn" type="button" class="btn btn-lg btn-outline-info">Kinda longer answer</button>
                 </div>
+                <p id = "Padding_Short"></p>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+    <div id="AnswersType2" class="container-fluid hide">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <p id = "Padding_Short"></p>
+                <label id="label_form" class="font-weight-bold" for="EnterAnswer">Your answer</label>
+                <input id="AnswerField" type="text" class="form-control" id="answer" placeholder="Enter answer">
+                <p id="Warning-answermissing" class="hide" style="color: red; font-size: 16px;">*Required field.</p>
+                <p id="WrongAnswer" class="hide" style="color: red; font-size: 16px;">Wrong! Correct answer is: </p>
+                <p id="CorrectAnswer" class="hide" style="color: green; font-size: 16px;">Correct!</p>
+                <p id = "Padding_Short"></p>
+                <button id="confirm-btn" type="button" class="btn btn-lg btn-outline-info">Confirm</button>
                 <p id = "Padding_Short"></p>
             </div>
             <div class="col-md-3"></div>
