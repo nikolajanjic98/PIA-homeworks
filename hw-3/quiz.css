@@ -1,0 +1,45 @@
+body {
+    position: relative; 
+}
+
+#Wrapper
+{
+    position:relative;
+}
+
+#Padding_Short
+{
+    height: 5px;
+}
+
+#Padding_Long
+{
+    height: 150px;
+}
+
+#Welcome
+{
+    padding-top:50px;
+    font-size: 24px;
+    color:#fff;
+    background-color: #666666;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#Rules
+{
+    padding-top:50px;
+    font-size: 24px;
+    color:#fff;
+    background-color: #494949;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#Ready
+{
+    padding-top:50px;
+    font-size: 24px;
+    color:#fff;
+    background-color: #3D3D3D;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}

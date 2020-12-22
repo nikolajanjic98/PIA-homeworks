@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="quiz.css">
+    <title>Quiz</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body data-spy="scroll" data-offset="20">
+
+<div id="Wrapper">
+    <div id="Welcome" class="container-fluid">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <p id = "Padding_Short"></p>
+                <h1 class="text-center font-weight-bold">Welcome to the quiz!</h1>
+                <p id = "Padding_Short"></p>
+                <p class="text-center">Read the rules, enter your name and press "Start quiz" to start.</p>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+    <div id="Rules" class="container-fluid">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <p id = "Padding_Short"></p>
+                <h1 class="text-center font-weight-bold">Rules</h1>
+                <p id = "Padding_Short"></p>
+                <ul style="width:100%">
+                    <li>Correct answers would provide 1 score point.</li>
+                    <li>No negative score points for wrong answers.</li>
+                    <li>Questions can be skipped.</li>
+                    <li>Watch the timer. For each question you have 20 seconds to answer.</li>
+                    <li>You are allowed to give up at any point in time. Just press "I give up!" button.</li>
+                </ul>
+                <p id = "Padding_Short"></p>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+    <div id="Ready" class="container-fluid">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <p id = "Padding_Short"></p>
+                <h1 class="text-center font-weight-bold">Enter your name</h1>
+                <p id = "Padding_Short"></p>
+                <form>
+                    <div class="form-row">
+                        <div class="col">
+                            <label id="label_form" class="font-weight-bold" for="EnterName">Your name</label>
+                            <input type="text" class="form-control" id="Ime" placeholder="Enter name">
+                            <p style="color: red; font-size: 16px;">*Required field.</p>
+                        </div>
+                    </div>
+                    <p id = "Padding_Short"></p>
+                    <button type="button" class="btn btn-success btn-lg btn-block">Start quiz</button>
+                </form>
+                <p id = "Padding_Long"></p>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>
