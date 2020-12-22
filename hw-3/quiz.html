@@ -7,11 +7,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script defer src="quiz.js"></script>
 </head>
 <body data-spy="scroll" data-offset="20">
 
-<div id="Wrapper">
+<div id="WrapperStart">
     <div id="Welcome" class="container-fluid">
         <div class="row">
             <div class="col-md-3"></div>
@@ -59,7 +61,7 @@
                         </div>
                     </div>
                     <p id = "Padding_Short"></p>
-                    <button type="button" class="btn btn-success btn-lg btn-block">Start quiz</button>
+                    <button id="startquiz-btn" type="button" class="btn btn-success btn-lg btn-block">Start quiz</button>
                 </form>
                 <p id = "Padding_Long"></p>
             </div>
@@ -67,7 +69,64 @@
         </div>
     </div>
 </div>
-
+<div id="WrapperQuestions" class="hide">
+    <div id="ScoreTimerInfo" class="container-fluid">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
+                <div id="Score">Score: </div>
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-2">
+                <div id="Timer">Time left: </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <div id="QuestionTitle" class="container-fluid">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <p id = "Padding_Short"></p>
+                <h1 id="QuestionId" class="text-center font-weight-bold">Question</h1>
+                <p id = "Padding_Short"></p>
+                <p id="QuestionType" class="text-center">Read the rules, enter your name and press "Start quiz" to start.</p>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+    <div id="Answers" class="container-fluid">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <p id = "Padding_Short"></p>
+                <div id= "AnswerButtons" class="btn-grid">
+                    <button id="answer-btn" type="button" class="btn btn-lg btn-outline-info">Really really really long answer</button>
+                    <button id="answer-btn" type="button" class="btn btn-lg btn-outline-info">Answer2</button>
+                    <button id="answer-btn" type="button" class="btn btn-lg btn-outline-info">Answer3</button>
+                    <button id="answer-btn" type="button" class="btn btn-lg btn-outline-info">Kinda longer answer</button>
+                </div>
+                <p id = "Padding_Short"></p>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+    <div id="Controls", class="container-fluid">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <p id = "Padding_Short"></p>
+                <div id= "ControlButtons" class="btn-grid">
+                    <button id="answer-btn" type="button" class="btn btn-lg btn-danger">I give up!</button>
+                    <button id="answer-btn" type="button" class="btn btn-lg btn-warning">Next question...</button>
+                </div>
+                <p id = "Padding_Short"></p>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+    <div id="Bottom"></div>
+</div>
 
 </body>
 

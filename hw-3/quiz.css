@@ -2,7 +2,12 @@ body {
     position: relative; 
 }
 
-#Wrapper
+#WrapperStart
+{
+    position:relative;
+}
+
+#WrapperQuestions
 {
     position:relative;
 }
@@ -42,4 +47,55 @@ body {
     color:#fff;
     background-color: #3D3D3D;
     font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#ScoreTimerInfo
+{
+    padding-top:5px;
+    font-size: 24px;
+    color:#fff;
+    background-color: #666666;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#QuestionTitle
+{
+    padding-top:50px;
+    font-size: 24px;
+    color:#fff;
+    background-color: #666666;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#Answers
+{
+    background-color: #494949;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    padding-top: 80px;
+}
+
+#Controls
+{
+    background-color: #494949;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    padding-bottom: 80x;
+}
+
+#Bottom
+{
+    background-color: #3D3D3D;
+    height: 400px;
+}
+
+.btn-grid
+{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.hide
+{
+    display:none;
 }
