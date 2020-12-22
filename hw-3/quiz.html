@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script defer src="quiz.js"></script>
+    <script type="text/javascript" src="data.json"></script>
+    <script type="text/javascript" defer src="quiz.js"></script>
 </head>
 <body data-spy="scroll" data-offset="20">
 
@@ -74,7 +75,7 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-2">
-                <div id="Score">Score: </div>
+                <div id="Score">Score: 0</div>
             </div>
             <div class="col-md-4"></div>
             <div class="col-md-2">
@@ -101,10 +102,10 @@
             <div class="col-md-6">
                 <p id = "Padding_Short"></p>
                 <div id= "AnswerButtons" class="btn-grid">
-                    <button id="answer-btn" type="button" class="btn btn-lg btn-outline-info">Really really really long answer</button>
-                    <button id="answer-btn" type="button" class="btn btn-lg btn-outline-info">Answer2</button>
-                    <button id="answer-btn" type="button" class="btn btn-lg btn-outline-info">Answer3</button>
-                    <button id="answer-btn" type="button" class="btn btn-lg btn-outline-info">Kinda longer answer</button>
+                    <button id="answer1-btn" type="button" class="btn btn-lg btn-outline-info">Really really really long answer</button>
+                    <button id="answer2-btn" type="button" class="btn btn-lg btn-outline-info">Answer2</button>
+                    <button id="answer3-btn" type="button" class="btn btn-lg btn-outline-info">Answer3</button>
+                    <button id="answer4-btn" type="button" class="btn btn-lg btn-outline-info">Kinda longer answer</button>
                 </div>
                 <p id = "Padding_Short"></p>
             </div>
@@ -117,8 +118,8 @@
             <div class="col-md-6">
                 <p id = "Padding_Short"></p>
                 <div id= "ControlButtons" class="btn-grid">
-                    <button id="answer-btn" type="button" class="btn btn-lg btn-danger">I give up!</button>
-                    <button id="answer-btn" type="button" class="btn btn-lg btn-warning">Next question...</button>
+                    <button id="giveup-btn" type="button" class="btn btn-lg btn-danger">I give up!</button>
+                    <button id="nextquestion-btn" type="button" class="btn btn-lg btn-warning">Next question...</button>
                 </div>
                 <p id = "Padding_Short"></p>
             </div>
