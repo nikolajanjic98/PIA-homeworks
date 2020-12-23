@@ -1,4 +1,28 @@
 var mydata = JSON.parse(data);
+var myleaderboard = JSON.parse(leaderboard);
+
+const leaderboardPage = document.getElementById('WrapperLeaderBoard')
+
+const LN1 = document.getElementById('LN-1')
+const S1 = document.getElementById('S-1')
+const LN2 = document.getElementById('LN-2')
+const S2 = document.getElementById('S-2')
+const LN3 = document.getElementById('LN-3')
+const S3 = document.getElementById('S-3')
+const LN4 = document.getElementById('LN-4')
+const S4 = document.getElementById('S-4')
+const LN5 = document.getElementById('LN-5')
+const S5 = document.getElementById('S-5')
+const LN6 = document.getElementById('LN-6')
+const S6 = document.getElementById('S-6')
+const LN7 = document.getElementById('LN-7')
+const S7 = document.getElementById('S-7')
+const LN8 = document.getElementById('LN-8')
+const S8 = document.getElementById('S-8')
+const LN9 = document.getElementById('LN-9')
+const S9 = document.getElementById('S-9')
+const LN10 = document.getElementById('LN-10')
+const S10 = document.getElementById('S-10')
 
 const startQuizButton = document.getElementById('startquiz-btn')
 startQuizButton.addEventListener('click', startQuiz)
@@ -93,40 +117,49 @@ function initNextQuestion()
     answered = false
     currentTime = 20
 
-    if (currentQuestionIndex < 7)
+    if (currentQuestionIndex < 10)
     {
-        // Reset button states
-        answer1.classList.remove('btn-success')
-        answer1.classList.remove('btn-danger')
-        answer1.classList.remove('btn-outline-info')
-        answer1.classList.add('btn-outline-info')
-
-        answer2.classList.remove('btn-success')
-        answer2.classList.remove('btn-danger')
-        answer2.classList.remove('btn-outline-info')
-        answer2.classList.add('btn-outline-info')
-
-        answer3.classList.remove('btn-success')
-        answer3.classList.remove('btn-danger')
-        answer3.classList.remove('btn-outline-info')
-        answer3.classList.add('btn-outline-info')
+        if (currentQuestionIndex < 7)
+        {
+            // Reset button states
+            answer1.classList.remove('btn-success')
+            answer1.classList.remove('btn-danger')
+            answer1.classList.remove('btn-outline-info')
+            answer1.classList.add('btn-outline-info')
     
-        answer4.classList.remove('btn-success')
-        answer4.classList.remove('btn-danger')
-        answer4.classList.remove('btn-outline-info')
-        answer4.classList.add('btn-outline-info')
+            answer2.classList.remove('btn-success')
+            answer2.classList.remove('btn-danger')
+            answer2.classList.remove('btn-outline-info')
+            answer2.classList.add('btn-outline-info')
+    
+            answer3.classList.remove('btn-success')
+            answer3.classList.remove('btn-danger')
+            answer3.classList.remove('btn-outline-info')
+            answer3.classList.add('btn-outline-info')
+        
+            answer4.classList.remove('btn-success')
+            answer4.classList.remove('btn-danger')
+            answer4.classList.remove('btn-outline-info')
+            answer4.classList.add('btn-outline-info')
+        }
+        else
+        {
+            answerfield.value = ''
+            correctanswertext.classList.add('hide')
+            wronganswertext.classList.add('hide')
+            answertype1.classList.add('hide')
+            answertype2.classList.remove('hide')
+        }
+        showQuestion(currentQuestionIndex)
+    
+        currentQuestionIndex = currentQuestionIndex + 1
     }
     else
     {
-        answerfield.value = ''
-        correctanswertext.classList.add('hide')
-        wronganswertext.classList.add('hide')
-        answertype1.classList.add('hide')
-        answertype2.classList.remove('hide')
+        clearTimeout
+        showScoreAndLeaderBoard()
     }
-    showQuestion(currentQuestionIndex)
-
-    currentQuestionIndex = currentQuestionIndex + 1
+    
 }
 
 function showQuestion(index)
@@ -146,6 +179,57 @@ function showQuestion(index)
     }
 
     currentCorrectAnswer = mydata[index].Correct
+}
+
+function showScoreAndLeaderBoard()
+{
+    clearInterval(quiztimervar)
+    questionPage.classList.add('hide')
+    leaderboardPage.classList.remove('hide')
+
+    let leaderboardarray = []
+
+    for (i = 0; i < 10; i++)
+    {
+        let newitem = {name: myleaderboard[i].name, score: myleaderboard[i].score}
+        leaderboardarray.push(newitem)
+    }
+
+    leaderboardarray.sort((a, b) => (a.name > b.name) ? 1 : -1)
+    leaderboardarray.sort(function(a, b){return b.score-a.score});
+    
+    LN1.innerText = leaderboardarray[0].name
+    S1.innerText = leaderboardarray[0].score
+
+    LN2.innerText = leaderboardarray[1].name
+    S2.innerText = leaderboardarray[1].score
+
+    LN3.innerText = leaderboardarray[2].name
+    S3.innerText = leaderboardarray[2].score
+
+    LN4.innerText = leaderboardarray[3].name
+    S4.innerText = leaderboardarray[3].score
+    
+    LN5.innerText = leaderboardarray[4].name
+    S5.innerText = leaderboardarray[4].score
+
+    LN6.innerText = leaderboardarray[5].name
+    S6.innerText = leaderboardarray[5].score
+
+    LN7.innerText = leaderboardarray[6].name
+    S7.innerText = leaderboardarray[6].score
+
+    LN8.innerText = leaderboardarray[7].name
+    S8.innerText = leaderboardarray[7].score
+
+    LN9.innerText = leaderboardarray[8].name
+    S9.innerText = leaderboardarray[8].score
+
+    LN10.innerText = leaderboardarray[9].name
+    S10.innerText = leaderboardarray[9].score
+
+    console.log(leaderboardarray)
+
 }
 
 function selectAnswer_1()
