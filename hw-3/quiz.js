@@ -1,67 +1,81 @@
-var mydata = JSON.parse(data);
-var myleaderboard = JSON.parse(leaderboard);
+var mydata = JSON.parse(data)
 
-const leaderboardPage = document.getElementById('WrapperLeaderBoard')
+var leaderboardPage = document.getElementById('WrapperLeaderBoard')
+var leaderboardDefault = [{name: 'Vladimir Putin', score: 8},
+{name: 'Joacim Cans', score: 7},
+{name: 'Bruce Lee', score: 10},
+{name: 'George Orwell', score: 9},
+{name: 'Henry Ford', score: 5},
+{name: 'Ingrid Bergman', score: 4},
+{name: 'Cleopatra', score: 3},
+{name: 'Prince Charles', score: 2},
+{name: 'Emile Zatopek', score: 1},
+{name: 'Brad Pitt', score: 4},]
 
-const LN1 = document.getElementById('LN-1')
-const S1 = document.getElementById('S-1')
-const LN2 = document.getElementById('LN-2')
-const S2 = document.getElementById('S-2')
-const LN3 = document.getElementById('LN-3')
-const S3 = document.getElementById('S-3')
-const LN4 = document.getElementById('LN-4')
-const S4 = document.getElementById('S-4')
-const LN5 = document.getElementById('LN-5')
-const S5 = document.getElementById('S-5')
-const LN6 = document.getElementById('LN-6')
-const S6 = document.getElementById('S-6')
-const LN7 = document.getElementById('LN-7')
-const S7 = document.getElementById('S-7')
-const LN8 = document.getElementById('LN-8')
-const S8 = document.getElementById('S-8')
-const LN9 = document.getElementById('LN-9')
-const S9 = document.getElementById('S-9')
-const LN10 = document.getElementById('LN-10')
-const S10 = document.getElementById('S-10')
+var LN1 = document.getElementById('LN-1')
+var S1 = document.getElementById('S-1')
+var LN2 = document.getElementById('LN-2')
+var S2 = document.getElementById('S-2')
+var LN3 = document.getElementById('LN-3')
+var S3 = document.getElementById('S-3')
+var LN4 = document.getElementById('LN-4')
+var S4 = document.getElementById('S-4')
+var LN5 = document.getElementById('LN-5')
+var S5 = document.getElementById('S-5')
+var LN6 = document.getElementById('LN-6')
+var S6 = document.getElementById('S-6')
+var LN7 = document.getElementById('LN-7')
+var S7 = document.getElementById('S-7')
+var LN8 = document.getElementById('LN-8')
+var S8 = document.getElementById('S-8')
+var LN9 = document.getElementById('LN-9')
+var S9 = document.getElementById('S-9')
+var LN10 = document.getElementById('LN-10')
+var S10 = document.getElementById('S-10')
 
-const startQuizButton = document.getElementById('startquiz-btn')
+var startQuizButton = document.getElementById('startquiz-btn')
 startQuizButton.addEventListener('click', startQuiz)
 
-const mainPage = document.getElementById('WrapperStart')
-const questionPage = document.getElementById('WrapperQuestions')
+var mainPage = document.getElementById('WrapperStart')
+var questionPage = document.getElementById('WrapperQuestions')
 
-const score = document.getElementById('Score')
-const timer = document.getElementById('Timer')
+var score = document.getElementById('Score')
+var timer = document.getElementById('Timer')
 
-const questionTitle = document.getElementById('QuestionId')
-const questionType = document.getElementById('QuestionType')
+var questionTitle = document.getElementById('QuestionId')
+var questionType = document.getElementById('QuestionType')
 
-const answer1 = document.getElementById('answer1-btn')
+var answer1 = document.getElementById('answer1-btn')
 answer1.addEventListener('click', selectAnswer_1)
-const answer2 = document.getElementById('answer2-btn')
+var answer2 = document.getElementById('answer2-btn')
 answer2.addEventListener('click', selectAnswer_2)
-const answer3 = document.getElementById('answer3-btn')
+var answer3 = document.getElementById('answer3-btn')
 answer3.addEventListener('click', selectAnswer_3)
-const answer4 = document.getElementById('answer4-btn')
+var answer4 = document.getElementById('answer4-btn')
 answer4.addEventListener('click', selectAnswer_4)
 
-const answertype1 = document.getElementById('Answers')
+var answertype1 = document.getElementById('Answers')
 
-const answertype2 = document.getElementById('AnswersType2')
-const confirmButton = document.getElementById('confirm-btn')
+var answertype2 = document.getElementById('AnswersType2')
+var confirmButton = document.getElementById('confirm-btn')
 confirmButton.addEventListener('click', confirmAnswer)
 
-const answerfield = document.getElementById('AnswerField')
-const answermissingwarning = document.getElementById('Warning-answermissing')
+var answerfield = document.getElementById('AnswerField')
+var answermissingwarning = document.getElementById('Warning-answermissing')
 
-const namefield = document.getElementById('NameField') 
-const namemissingwarning = document.getElementById('Warning-namemissing')
+var namefield = document.getElementById('NameField') 
+var namemissingwarning = document.getElementById('Warning-namemissing')
 
-const wronganswertext = document.getElementById('WrongAnswer')
-const correctanswertext = document.getElementById('CorrectAnswer')
+var wronganswertext = document.getElementById('WrongAnswer')
+var correctanswertext = document.getElementById('CorrectAnswer')
 
-const nextQuestionButton = document.getElementById('nextquestion-btn')
+var nextQuestionButton = document.getElementById('nextquestion-btn')
 nextQuestionButton.addEventListener('click', initNextQuestion)
+
+var giveUpButton = document.getElementById('giveup-btn')
+giveUpButton.addEventListener('click', giveupandendquiz)
+
+var congratulations = document.getElementById('Congratulations')
 
 var playername = ''
 var currentQuestionIndex = 0
@@ -94,6 +108,13 @@ function quizTimerTick()
 
 function startQuiz()
 {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.leaderboard !== "undefined") 
+        {
+            localStorage.setItem("leaderboard",JSON.stringify(leaderboardDefault))
+        }
+    }
+    
     
     if (namefield.value != '')
     {   
@@ -110,6 +131,12 @@ function startQuiz()
     {
         namemissingwarning.classList.remove('hide')
     }
+}
+
+function giveupandendquiz()
+{
+    currentQuestionIndex = 10
+    initNextQuestion()
 }
 
 function initNextQuestion()
@@ -156,6 +183,7 @@ function initNextQuestion()
     }
     else
     {
+        congratulations.innerText = 'Congratulations, ' + playername
         clearTimeout
         showScoreAndLeaderBoard()
     }
@@ -189,15 +217,29 @@ function showScoreAndLeaderBoard()
 
     let leaderboardarray = []
 
-    for (i = 0; i < 10; i++)
-    {
-        let newitem = {name: myleaderboard[i].name, score: myleaderboard[i].score}
-        leaderboardarray.push(newitem)
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.leaderboard) 
+        {
+            var existingleaderboard = JSON.parse(localStorage.getItem("leaderboard"))
+            for (i = 0; i < 10; i++)
+            {
+                let newitem = {name: existingleaderboard[i].name, score: existingleaderboard[i].score}
+                leaderboardarray.push(newitem)
+            }
+        }
     }
+
+    let player = {name: playername, score: currentScore}
+    leaderboardarray.push(player)
 
     leaderboardarray.sort((a, b) => (a.name > b.name) ? 1 : -1)
     leaderboardarray.sort(function(a, b){return b.score-a.score});
     
+    var index = leaderboardarray.indexOf(leaderboardarray[10]);
+    if (index > -1) {
+        leaderboardarray.splice(index, 1);
+    }
+
     LN1.innerText = leaderboardarray[0].name
     S1.innerText = leaderboardarray[0].score
 
@@ -228,8 +270,6 @@ function showScoreAndLeaderBoard()
     LN10.innerText = leaderboardarray[9].name
     S10.innerText = leaderboardarray[9].score
 
-    console.log(leaderboardarray)
-
 }
 
 function selectAnswer_1()
@@ -242,6 +282,7 @@ function selectAnswer_1()
             answer1.classList.add('btn-success')
             currentScore = currentScore + 1
             score.innerText = 'Score: ' + currentScore
+
         }
         else
         {
@@ -264,6 +305,8 @@ function selectAnswer_1()
             }
         }
         answered = true
+        currentTime = 5
+        evaluation = true
     }
 }
 
@@ -299,6 +342,8 @@ function selectAnswer_2()
             }
         }
         answered = true
+        currentTime = 5
+        evaluation = true
     }
 }
 
@@ -334,6 +379,8 @@ function selectAnswer_3()
             }
         }
         answered = true
+        currentTime = 5
+        evaluation = true
     }   
 }
 
@@ -369,6 +416,8 @@ function selectAnswer_4()
             }
         }
         answered = true
+        currentTime = 5
+        evaluation = true
     }
 }
 
