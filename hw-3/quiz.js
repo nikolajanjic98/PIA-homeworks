@@ -109,7 +109,7 @@ function quizTimerTick()
 function startQuiz()
 {
     if(typeof(Storage) !== "undefined") {
-        if (localStorage.leaderboard !== "undefined") 
+        if (localStorage.hasOwnProperty("leaderboard") == false) 
         {
             localStorage.setItem("leaderboard",JSON.stringify(leaderboardDefault))
         }
@@ -269,6 +269,8 @@ function showScoreAndLeaderBoard()
 
     LN10.innerText = leaderboardarray[9].name
     S10.innerText = leaderboardarray[9].score
+
+    localStorage.setItem("leaderboard", JSON.stringify(leaderboardarray));
 
 }
 
