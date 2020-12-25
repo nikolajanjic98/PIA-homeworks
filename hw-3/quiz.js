@@ -77,33 +77,34 @@ giveUpButton.addEventListener('click', giveupandendquiz)
 
 var congratulations = document.getElementById('Congratulations')
 
-var playername = ''
-var currentQuestionIndex = 0
-var currentCorrectAnswer = -1
-var answered = false
-var evaluation = false
+let playername = '';
+let currentQuestionIndex = 0;
+let currentCorrectAnswer = -1;
+let answered = false;
+let evaluation = false;
 // score and timer
-var currentScore = 0
-var currentTime = 0
+let currentScore = 0;
+let currentTime = 0;
 
 var quiztimervar
 
 function quizTimerTick()
 {
     timer.innerText = 'Time left: ' + currentTime
-    currentTime = currentTime - 1
     if (currentTime <= 0)
     {
         if (evaluation == false)
         {
             currentTime = 5
             evaluation = true
+            answered = true
         }
         else
         {
             initNextQuestion()
         }
     }
+    currentTime = currentTime - 1
 }
 
 function startQuiz()
@@ -177,13 +178,19 @@ function initNextQuestion()
             answertype1.classList.add('hide')
             answertype2.classList.remove('hide')
         }
+
+        if (currentQuestionIndex == 9)
+        {
+            nextQuestionButton.innerText = 'See results...'
+        }
+
         showQuestion(currentQuestionIndex)
     
         currentQuestionIndex = currentQuestionIndex + 1
     }
     else
     {
-        congratulations.innerText = 'Congratulations, ' + playername
+        congratulations.innerText = 'Thank you for participating ' + playername + '. Your score is ' + currentScore + '!'
         clearTimeout
         showScoreAndLeaderBoard()
     }
@@ -201,9 +208,13 @@ function showQuestion(index)
         answer3.innerText = mydata[index].answer3
         answer4.innerText = mydata[index].answer4
     }
-    else if (mydata[index].type == 'ERA')
+    else if (mydata[index].type == 'FILL')
     {
-        questionType.innerText = 'Enter right answer.'
+        questionType.innerText = 'Fill the sentence.'
+    }
+    else if (mydata[index].type == 'ERN')
+    {
+        questionType.innerText = 'Enter number.'
     }
 
     currentCorrectAnswer = mydata[index].Correct
@@ -430,7 +441,7 @@ function confirmAnswer()
         if (answered == false)
         {
             answermissingwarning.classList.add('hide')
-            if (answerfield.value == currentCorrectAnswer)
+            if (answerfield.value.toLowerCase() == currentCorrectAnswer.toLowerCase())
             {
                 correctanswertext.innerText = 'Correct!'
                 correctanswertext.classList.remove('hide')
