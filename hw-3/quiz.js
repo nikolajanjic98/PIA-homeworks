@@ -90,14 +90,13 @@ var quiztimervar
 
 function quizTimerTick()
 {
-    timer.innerText = 'Time left: ' + currentTime
+    
     if (currentTime <= 0)
     {
-        if (evaluation == false)
+        if (evaluation == false && answered == true)
         {
             currentTime = 5
             evaluation = true
-            answered = true
         }
         else
         {
@@ -105,6 +104,7 @@ function quizTimerTick()
         }
     }
     currentTime = currentTime - 1
+    timer.innerText = 'Time left: ' + currentTime
 }
 
 function startQuiz()
